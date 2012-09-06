@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>jquery.dynamitext Demo</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery.dynamitext.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.dynamicText').dynamitext({ debug: true, minFontSize: 11, startingSizeIsBaseSize: false });
+		});
+	</script>
+</head>
+<body>
+	<div title="Cover">
+            <style type="text/css">
+                .reportTitle
+                {
+                    color: #DA7633;
+                    font-size: 75px;
+                    font-family: Arial;
+                }
+
+                .template
+                {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            </style>
+            <div class="template">
+                <div class="dynamicText" style="left: 5%; top: 5%; width: 50%; height: 10%; position: fixed; z-index: 1; color: #DA7633; font-size: 75px; font-family: Arial;">
+                    BIG TITLE TEXT
+                </div>
+                <div class="dynamicText" id="hello" style="left: 7%; top: 15%; width: 40%; height: 5%; position: fixed; z-index: 1; color: #004990; font-size: 27px; font-family: Arial;">
+                    SUBTITLE TEXT RIGHT BELOW TITLE
+                </div>
+                <div style="right: 0; bottom: 0; width: 100%; height: 20%; background-color: #DA7633; position: fixed; z-index: 3;">
+                    <div class="dynamicText" style="left: 5%; bottom: 5%; color: #fff; font-family: Arial; width: 20%; position: fixed;">
+                        <div style="margin-bottom: 5px;">OPTION 1</div>
+                        <div style="margin-bottom: 5px;">OPTION 2</div>
+                        <div style="margin-bottom: 5px;">OPTION 3</div>
+                        <div style="margin-bottom: 5px;">OPTION 4</div>
+                    </div>
+                    <div class="dynamicText" style="left: 30%; bottom: 7%; color: #fff; font-family: Arial; width: 40%; position: fixed; text-align: center; font-size: 20px;">
+                        <div>www.CodeTunnel.com</div>
+                        <div style="font-size: 50%;">CodeTunnel is your resource for innovative design and development!</div>
+                    </div>
+                    <div class="dynamicText" style="right: 5%; bottom: 7%; color: #fff; font-family: Arial; width: 20%; position: fixed; text-align: right;">
+                        <div style="margin-bottom: 5px;">OPTION 5</div>
+                        <div style="margin-bottom: 5px;">OPTION 6</div>
+                        <div style="margin-bottom: 5px;">OPTION 7</div>
+                    </div>
+                </div>
+                <div style="left: 0; bottom: 20%; width: 5%; height: 50%; background-color: #004990; position: fixed; z-index: 1;">
+                </div>
+                <div class="dynamicText" style="left: 5%; bottom: 20%; width: 35%; height: 50%; position: fixed; z-index: 1; padding: 10px; font-size: 20px; font-family: Arial;">
+                    <h1 style="color: #8A7967; font-style: italic; font-family: 'Times New Roman';">Lorem ipsum</h1>
+                    dolor sit amet, consectetur adipiscing elit. Aliquam malesuada massa sed lacus cursus et volutpat neque mollis. Nullam justo augue, pretium eu lobortis nec, semper quis nisl. Mauris pharetra aliquet volutpat. Etiam feugiat auctor nisi, vel elementum orci malesuada eu. Aenean ac diam ut tortor viverra ultricies. Proin nisi justo, eleifend vel semper nec, lacinia id erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div style="right: 50%; bottom: 20%; width: 7%; height: 45%; background-color: #6692BC; position: fixed; z-index: 2;">
+                </div>
+                <div style="right: 50%; bottom: 20%; width: 9%; height: 30%; background-color: #DAC793; position: fixed; z-index: 1;">
+                </div>
+                <div style="left: 50%; bottom: 20%; width: 25%; height: 60%; background-color: #E5EDF4; position: fixed; z-index: 1; overflow: auto;">
+                </div>
+                <div style="right: 0; bottom: 20%; width: 5%; height: 50%; background-color: #8A7967; position: fixed; z-index: 1;">
+                </div>
+                <div style="right: 5%; bottom: 20%; width: 15%; height: 65%; background-color: #004990; position: fixed; z-index: 3; font-family: Arial; overflow: auto;">
+                </div>
+                <div style="right: 20%; bottom: 20%; width: 6%; height: 35%; background-color: #78496A; position: fixed; z-index: 2;">
+                </div>
+            </div>
+        </div>
+</body>
+</html>
