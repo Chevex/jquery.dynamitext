@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
 	// Default Options:
 	//
 	//                  debug - If true, shows a window in the top left of the page showing some stats.
@@ -24,11 +24,14 @@
 		var settings = $.extend({}, defaultOptions, options);
 
 		// Declare plugin scoped variables.
-		var $elems = this.css('border', 'dashed 1px #f00'),
+		var $elems = this,
 			$debug,
 			$debugWidth,
 			$debugHeight,
 			$resizingElem = $(settings.resizingElement);
+            
+        if (settings.debug)
+            $elems.css('border', 'dotted 1px #f00');
 
 		// If startingSizeIsBaseSize is enabled then override the baseWidth and baseHeight with the width and height of $resizingElem.
 		if (settings.startingSizeIsBaseSize) {
