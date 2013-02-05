@@ -77,7 +77,6 @@
             $elems.each(function () {
                 var elem = this,
 					$elem = $(elem),
-					baseFontSize = settings.startingSizeIsBaseSize ? $elem.data('baseFontSize') : settings.baseFontSize,
 					// Increase/decrease font size by the percentage.
 					newFontSize = settings.baseFontSize + (settings.baseFontSize * totalPercentage);
 
