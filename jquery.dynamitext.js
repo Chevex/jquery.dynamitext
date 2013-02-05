@@ -39,6 +39,7 @@
 		if (settings.startingSizeIsBaseSize) {
 			settings.baseWidth = settings.$resizingElement.width();
 			settings.baseHeight = settings.$resizingElement.height();
+			settings.baseFontSize = parseInt(settings.$resizingElement.css('font-size'));
 		}
 
 		// Iterate over all dynamic text elements and set the baseFontSize to be used when calculating size adjustments.
