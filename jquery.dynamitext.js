@@ -39,6 +39,11 @@
         if (settings.startingSizeIsBaseSize) {
             settings.baseWidth = settings.$resizingElement.width();
             settings.baseHeight = settings.$resizingElement.height();
+
+            $elems.each(function () {
+                var baseFontSize = parseInt(settings.$resizingElement.css('font-size'));
+                $(this).data('baseFontSize', baseFontSize);
+            });
         }
 
         $elems.css('overflow', 'hidden');
