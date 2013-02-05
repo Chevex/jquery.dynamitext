@@ -28,9 +28,13 @@
         // Declare plugin scoped variables.
         var $elems = this,
 			$debug,
-			$debugWidth,
-			$debugHeight,
-			$debugFontSize;
+			$debugDiagonal,
+			$debugBaseFontSize,
+			$debugBaseWidth,
+            $debugBaseHeight,
+            $debugFontSize,
+            $debugWidth,
+            $debugHeight;
 
         if (settings.debug)
             $elems.css('border', 'dotted 1px #f00');
@@ -49,8 +53,8 @@
 				.css({
 				    position: 'absolute',
 				    padding: '10px',
-				    top: '0',
-				    left: '0',
+				    bottom: '0',
+				    right: '0',
 				    background: '#f00',
 				    color: '#fff',
 				    fontSize: '12px',
@@ -60,7 +64,11 @@
 
             $debugDiagonal = $('<div>Diagonal: 0% changed.</div>').appendTo($debug);
             $debugBaseFontSize = $('<div>Base Font Size: 0px</div>').appendTo($debug);
+            $debugBaseWidth = $('<div>Base Width: 0px</div>').appendTo($debug);
+            $debugBaseHeight = $('<div>Base Height: 0px</div>').appendTo($debug);
             $debugFontSize = $('<div>Calculated Font Size: 0px</div>').appendTo($debug);
+            $debugWidth = $('<div>Current Width: 0px</div>').appendTo($debug);
+            $debugHeight = $('<div>Current Height: 0px</div>').appendTo($debug);
         }
 
         // On resize of box also resize font.
@@ -77,6 +85,7 @@
             $elems.each(function () {
                 var elem = this,
 					$elem = $(elem),
+					baseFontSize = settings.baseFontSize,
 					// Increase/decrease font size by the percentage.
 					newFontSize = settings.baseFontSize + (settings.baseFontSize * totalPercentage);
 
@@ -93,7 +102,11 @@
                 if (settings.debug) {
                     $debugDiagonal.text('Diagonal: ' + Math.round(totalPercentage * 100) + '% changed.');
                     $debugBaseFontSize.text('Base Font Size: ' + settings.baseFontSize);
+                    $debugBaseWidth.text('Base Width: ' + settings.baseWidth);
+                    $debugBaseHeight.text('Base Height: ' + settings.baseHeight);
                     $debugFontSize.text('Calculated Font Size: ' + newFontSize);
+                    $debugWidth.text('Current Width: ' + settings.$diagonalElement.width());
+                    $debugHeight.text('Current Height: ' + settings.$diagonalElement.height());
                 }
             });
         }
